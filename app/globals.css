@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FAF6F0;
+  --surface: #FFFFFF;
+  --surface-2: #F1EAE0;
+  --text: #221B2E;
+  --text-dim: #6E6478;
+  --border: #E9E0D2;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+}
+
+.surface { background: var(--surface); }
+.surface-2 { background: var(--surface-2); }
+.border-vn { border-color: var(--border); }
+.text-dim { color: var(--text-dim); }
