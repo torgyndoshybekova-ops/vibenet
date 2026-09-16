@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import NotificationsBell from "./NotificationsBell";
 
 export default function Navbar({ profile }) {
   const router = useRouter();
@@ -26,6 +27,7 @@ export default function Navbar({ profile }) {
         <Link href="/messages" className="text-dim hover:text-inherit">
           Сообщения
         </Link>
+        {profile?.id && <NotificationsBell userId={profile.id} />}
         <Link href="/profile" className="flex items-center gap-2">
           <img
             src={profile?.avatar_url || "https://api.dicebear.com/7.x/thumbs/svg?seed=" + profile?.username}
